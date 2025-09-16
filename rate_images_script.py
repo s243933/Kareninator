@@ -42,9 +42,9 @@ slider_key = f"rating_{idx}_{filename}"
 
 # If the slider key hasn't been created before, pre-seed it with 0
 if slider_key not in st.session_state:
-    st.session_state[slider_key] = 0
+    st.session_state[slider_key] = 1
 
-rating = col2.slider("Rating (0–5)", 0, 5, key=slider_key)
+rating = col2.slider("Rating (1–5)", 1, 5, key=slider_key)
 col2.caption("Use the slider, then click a button below.")
 
 # Save & Next
